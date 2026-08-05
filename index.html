@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Driftline — Summer Collection</title>
+<meta name="description" content="Driftline's summer collection: 7 shoes for the season. Buy two, get the third free." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="#top">Drift<span>line</span></a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">Menu</button>
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <ul>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#promo">Promo</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="promo-ribbon">
+  <div class="container">
+    Buy 2 shoes, get the 3rd free — automatically applied at the lowest price in your set of three
+  </div>
+</div>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="container">
+      <p class="hero-eyebrow">Summer Collection · 7 Styles</p>
+      <h1>Made for the <em>long</em> days.</h1>
+      <p class="hero-sub">
+        Seven shoes for one season — runners, slip-ons, and one pair of patent
+        oxfords for when the sun goes down. Buy two, get the third free.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#collection">Shop the collection</a>
+        <a class="btn btn-outline" href="#promo">See the promo calculator</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="collection">
+    <div class="container">
+      <div class="section-head">
+        <h2>The collection</h2>
+        <p class="section-count">07 styles</p>
+      </div>
+
+      <div class="product-grid" id="productGrid" role="list">
+        <!-- Product cards are rendered by js/main.js from js/products.js -->
+      </div>
+
+      <div class="promo-panel" id="promo">
+        <div>
+          <h3>Try the promo</h3>
+          <p>
+            Pick any three styles below. The lowest-priced pair is on us —
+            this mirrors the discount rule the checkout would apply, without
+            needing a live cart.
+          </p>
+        </div>
+        <div>
+          <div class="promo-picks" id="promoPicks"></div>
+          <div class="promo-total" id="promoTotal"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div>
+        <h2>About Driftline</h2>
+        <p>
+          Driftline designs footwear for the in-between hours of summer —
+          the walk to the ferry, the run before the heat sets in, the dinner
+          after. This first collection is seven styles, built to be worn on
+          repeat.
+        </p>
+        <p>
+          Every pair ships from a single warehouse, in recyclable packaging,
+          with a swing tag you can actually read.
+        </p>
+      </div>
+      <div id="contact">
+        <h2>Contact</h2>
+        <ul class="contact-list">
+          <li><span>Email</span> <a href="mailto:hello@driftline.example">hello@driftline.example</a></li>
+          <li><span>Support</span> <a href="mailto:support@driftline.example">support@driftline.example</a></li>
+          <li><span>Hours</span> <span>Mon–Fri, 9am–6pm</span></li>
+          <li><span>Shipping</span> <span>3–5 business days</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    &copy; 2026 Driftline. Summer Collection — 7 styles. Prices in USD.
+  </div>
+</footer>
+
+<!-- Product detail modal -->
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Close product detail">&times;</button>
+    <div class="modal-media">
+      <img id="modalImage" src="" alt="" />
+    </div>
+    <div class="modal-body">
+      <p class="modal-tagline" id="modalTagline"></p>
+      <h3 id="modalTitle"></h3>
+      <div class="price-tag">
+        <span class="stub">Price</span>
+        <span class="amount" id="modalPrice"></span>
+      </div>
+      <p id="modalDescription"></p>
+      <ul class="modal-details" id="modalDetails"></ul>
+    </div>
+  </div>
+</div>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
